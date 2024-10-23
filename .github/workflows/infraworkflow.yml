@@ -7,6 +7,9 @@ on:
 
     workflow_dispatch:
 
+permissions:
+  id-token: write # This is required for requesting the JWT
+
 env:
     AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID  }}    # set this to your Azure Subscription Id
     AZURE_RESOURCEGROUP_NAME: myrgtraining                      # set this to your preferred resource group name
